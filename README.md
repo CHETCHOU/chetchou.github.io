@@ -1,4 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to Chou's GitHub Pages
+
+This is my first blog website, and I am trying to customizing the pages.
+
+If there is any wrong in this website, u can contact me by Wechat.
 
 You can use the [editor on GitHub](https://github.com/CHETCHOU/chetchou.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
@@ -11,9 +15,9 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# My Learning blog
+## To record the notes when I am learning
+### Please contact me 
 
 - Bulleted
 - List
