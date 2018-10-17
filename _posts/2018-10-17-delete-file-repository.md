@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "update files in repository!"
+date:   2018-10-17 23:36:13 +0800
+categories: jekyll update
+---
+
 # 如何删除Github远程仓库的某个文件/文件夹
 ## How to delete a file/folder in the repository of Github
 
