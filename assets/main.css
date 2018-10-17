@@ -198,4 +198,5 @@ table td { border: 1px solid #e8e8e8; }
 /**iframe content*/
 .main-frame{
 	width: 100%;
+	height: 100%;
 }
