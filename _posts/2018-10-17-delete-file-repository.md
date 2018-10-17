@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title:  "update files in repository!"
 date:   2018-10-17 23:36:13 +0800
 categories: jekyll update
