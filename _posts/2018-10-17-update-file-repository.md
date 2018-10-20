@@ -5,8 +5,8 @@ date:   2018-10-17 23:36:13 +0800
 categories: jekyll update
 ---
 
-# 如何删除Github远程仓库的某个文件/文件夹
-## How to delete a file/folder in the repository of Github
+# 如何更新Github远程仓库的某个文件/文件夹
+## How to update a file/folder in the repository of Github
 
 Github远程仓库的文件是无法在Github上删除和修改的，必须下载到本地，然后再删除或修改，再更新到仓库中。
 
