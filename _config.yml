@@ -26,10 +26,11 @@ github_username:  Chet CHOU
 
 # Build settings
 paginate: 3
+gems: ['jekyll-paginate']
 
 highlighter: rouge
 markdown: kramdown
-gems: ['jekyll-paginate']
+
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
 
