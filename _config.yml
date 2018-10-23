@@ -27,6 +27,7 @@ github_username:  Chet CHOU
 # Build settings
 paginate: 3
 gems: ['jekyll-paginate']
+paginate_path: "home/page/:num/"
 
 highlighter: rouge
 markdown: kramdown
