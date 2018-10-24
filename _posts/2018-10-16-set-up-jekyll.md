@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Set up Jekyll!"
+comments: true
 date:   2018-10-16 23:36:13 +0800
 categories: jekyll update
 ---
