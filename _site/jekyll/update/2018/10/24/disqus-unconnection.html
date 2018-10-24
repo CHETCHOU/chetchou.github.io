@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Disqus无法加载的忧伤 | CHOU</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Disqus无法加载的忧伤" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
+<meta property="og:description" content="[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html" />
+<meta property="og:site_name" content="CHOU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-10-24T23:36:13+08:00" />
+<script type="application/ld+json">
+{"description":"[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。","@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html","headline":"Disqus无法加载的忧伤","dateModified":"2018-10-24T23:36:13+08:00","datePublished":"2018-10-24T23:36:13+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CHOU" /></head>
+<body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Disqus无法加载的忧伤</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-10-24T23:36:13+08:00" itemprop="datePublished">Oct 24, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="jekyll-disqus无法加载的忧伤">[Jekyll] Disqus无法加载的忧伤</h1>
+<p>Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。</p>
+<blockquote>
+  <p>如果你能翻墙，可以试试如何设置Disqus。</p>
+</blockquote>
+
+<ol>
+  <li>注册Disqus账号，网址为<code class="highlighter-rouge">https://disqus.com/</code></li>
+  <li>认证完成后，点击<strong>Add Disqus to Site</strong></li>
+  <li>根据指示填写相关信息，选择对应的Jekyll平台.</li>
+  <li>按照示例代码修改_posts文件中的YAML头文件.</li>
+  <li>按照代码中注释的部分，修改_layouts文件夹中的post.html文件。</li>
+</ol>
+
+<blockquote>
+  <p>因为国情如此，使用Disqus必须翻墙，否则Disqus部署完成后，访问时会不断加载，直至加载失败。</p>
+</blockquote>
+
+<hr />
+
+<ol>
+  <li>Sign up a Disqus account, its website is <code class="highlighter-rouge">https://disqus.com/</code></li>
+  <li>After your verification, find the button named <strong>Add Disqus to Site</strong></li>
+  <li>According to the instructions, Choose your platform your site on.</li>
+  <li>Add a variable called comments to the YAML Front Matter and set its value to true. A sample front matter might look like:<br />
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     ---
+     layout: default
+     comments: true
+     # other options
+     ---
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>In between a  tag, copy and paste the Universal Embed Code in the appropriate template where you’d like Disqus to load.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;div id="disqus_thread"&gt;&lt;/div&gt;
+     &lt;script&gt;
+        
+
+     var disqus_config = function () {
+     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+        
+     (function() { // DON'T EDIT BELOW THIS LINE
+     var d = document, s = d.createElement('script');
+     s.src = 'https://chous.disqus.com/embed.js';
+     s.setAttribute('data-timestamp', +new Date());
+     (d.head || d.body).appendChild(s);
+     })();
+     &lt;/script&gt;
+     &lt;noscript&gt;Please enable JavaScript to view the 
+         &lt;a href="https://disqus.com/?ref_noscript"&gt;comments powered by Disqus.&lt;/a&gt;
+     &lt;/noscript&gt;                           
+</code></pre></div>    </div>
+  </li>
+</ol>
+
+<hr />
+<p>对比了Disqus和多说的界面后，果断放弃了多说。但Disqus界面又不好使，因此放弃此功能，后续有需要再行增加。删除function代码如下：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      var disqus_config = function () {
+          this.page.url = "http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html";
+          this.page.identifier = "/jekyll/update/2018/10/24/disqus-unconnection.html";
+        //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+
+</code></pre></div></div>
+
+  </div><a class="u-url" href="/jekyll/update/2018/10/24/disqus-unconnection.html" hidden></a>
+
+</article>
+      </div>
+
+    </main>
+  </body>
+
+</html>
