@@ -28,7 +28,7 @@ gems: ['jekyll-paginate']
 paginate_path: "home/page/:num/"
 
 highlighter: rouge
-markdown: kramdown
+markdown: redcarpet
 
 
 exclude: ['README.md', 'LICENSE', "*.bak"]
