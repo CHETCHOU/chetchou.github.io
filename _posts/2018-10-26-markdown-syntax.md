@@ -10,7 +10,7 @@ Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过
 因语法较多，不定期更新总结。
 * 字体大小及颜色<br>
     `<font size=7>**关于**</font>`<br>
-    <font size=5>size为文字大小，1-7逐渐增大，默认值为3<font><br>
+    <font size=5>size为文字大小，1-7逐渐增大，默认值为3</font><br>
     
     `<font face="微软雅黑">关于</font>`<br>
     <font face="微软雅黑">face为文字字体，根据喜好自选。</font><br>
