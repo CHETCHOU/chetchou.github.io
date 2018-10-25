@@ -1,10 +1,11 @@
 ---
 layout: post
-title:  "[Jekyll]Disqus评论系统无法加载的忧伤"
+title:  "[Jekyll] Disqus无法加载的忧伤"
 comments: false
 date:   2018-10-24 23:36:13 +0800
 categories: jekyll update
 ---
+
 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。
 > 如果你能翻墙，可以试试如何设置Disqus。
 
@@ -34,12 +35,12 @@ Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面�
     ```
         <div id="disqus_thread"></div>
         <script>
-        
-
+    
         var disqus_config = function () {
         this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
         this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
         };
+        
         
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
@@ -54,6 +55,7 @@ Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面�
     ```
 
 -------
+
 对比了Disqus和多说的界面后，果断放弃了多说。但Disqus界面又不好使，因此放弃此功能，后续有需要再行增加。删除function代码如下：
 
     ```
