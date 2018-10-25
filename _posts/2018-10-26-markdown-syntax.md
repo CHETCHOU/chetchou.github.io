@@ -20,7 +20,9 @@ Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过
     
 * 位置
     `<center>关于</center>` or `<div align=center>关于</div>`
+如： <center>关于</center>
+
 
 -------
-未完待续
+未完待续...
 
