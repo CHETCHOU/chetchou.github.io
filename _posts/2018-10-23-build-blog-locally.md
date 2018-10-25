@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "如何本地运行Jekyll框架博客（MacOS）"
+title:  "[Jekyll]如何本地运行Jekyll框架博客（MacOS）"
 date:   2018-10-23 23:36:13 +0800
 comments: false
 categories: jekyll update
