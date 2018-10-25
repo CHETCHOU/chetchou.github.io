@@ -17,8 +17,8 @@ title: CHOU
 email: 18811443323@163.com
 description:  # this means to ignore newlines until "baseurl:"
   上善若水，水善利万物而不争，处众人之所恶，故几于道。
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://www.chetchou.cn" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '/' # the subpath of your site, e.g. /blog
+url: "http://blog.chetchou.cn" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  Chet CHOU
 
@@ -36,6 +36,7 @@ exclude: ['README.md', 'LICENSE', "*.bak"]
 theme: minima
 plugins:
   - jekyll-feed
+
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
