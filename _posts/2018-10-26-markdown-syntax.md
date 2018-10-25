@@ -18,10 +18,9 @@ Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过
     `<font color=red>关于</font>`<br>
     <font color=red>color为字体颜色，可以填写十六进制颜色值或颜色名。</font>
     
-* 位置
+* 位置<br>
     `<center>关于</center>` or `<div align=center>关于</div>`
-如： <center>关于</center>
-
+<br>如： <center>关于</center>
 
 -------
 未完待续...
