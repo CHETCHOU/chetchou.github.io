@@ -3,19 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Disqus无法加载的忧伤 | CHOU</title>
+<title>[Jekyll] Disqus无法加载的忧伤 | CHOU</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Disqus无法加载的忧伤" />
+<meta property="og:title" content="[Jekyll] Disqus无法加载的忧伤" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
-<meta property="og:description" content="[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
+<meta name="description" content="Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
+<meta property="og:description" content="Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。" />
 <link rel="canonical" href="http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html" />
 <meta property="og:url" content="http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html" />
 <meta property="og:site_name" content="CHOU" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-10-24T23:36:13+08:00" />
 <script type="application/ld+json">
-{"description":"[Jekyll] Disqus无法加载的忧伤 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。","@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html","headline":"Disqus无法加载的忧伤","dateModified":"2018-10-24T23:36:13+08:00","datePublished":"2018-10-24T23:36:13+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html"},"@context":"http://schema.org"}</script>
+{"description":"Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。 如果你能翻墙，可以试试如何设置Disqus。","@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html","headline":"[Jekyll] Disqus无法加载的忧伤","dateModified":"2018-10-24T23:36:13+08:00","datePublished":"2018-10-24T23:36:13+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CHOU" /></head>
 <body>
@@ -25,15 +25,14 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Disqus无法加载的忧伤</h1>
+    <h1 class="post-title p-name" itemprop="name headline">[Jekyll] Disqus无法加载的忧伤</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-10-24T23:36:13+08:00" itemprop="datePublished">Oct 24, 2018
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <h1 id="jekyll-disqus无法加载的忧伤">[Jekyll] Disqus无法加载的忧伤</h1>
-<p>Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。</p>
+    <p>Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。</p>
 <blockquote>
   <p>如果你能翻墙，可以试试如何设置Disqus。</p>
 </blockquote>
@@ -69,12 +68,12 @@
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>     &lt;div id="disqus_thread"&gt;&lt;/div&gt;
      &lt;script&gt;
-        
-
+    
      var disqus_config = function () {
      this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
      this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
      };
+        
         
      (function() { // DON'T EDIT BELOW THIS LINE
      var d = document, s = d.createElement('script');
@@ -91,11 +90,12 @@
 </ol>
 
 <hr />
+
 <p>对比了Disqus和多说的界面后，果断放弃了多说。但Disqus界面又不好使，因此放弃此功能，后续有需要再行增加。删除function代码如下：</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```
   var disqus_config = function () {
-      this.page.url = "http://localhost:4000/jekyll/update/2018/10/24/disqus-unconnection.html";
+      this.page.url = "http://localhost:4000//jekyll/update/2018/10/24/disqus-unconnection.html";
       this.page.identifier = "/jekyll/update/2018/10/24/disqus-unconnection.html";
     //this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
     //this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
