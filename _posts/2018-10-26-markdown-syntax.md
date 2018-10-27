@@ -6,6 +6,8 @@ date:   2018-10-26 01:00:13 +0800
 categories: jekyll update
 ---
 
+**Jekyll暂时没有正常解析Mardown文本，MWeb上预览效果正常，但是上传到Github上解析出来一塌糊涂，大家欢迎提意见。**
+
 Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过对内容进行标记，使得普通文本具有一定的格式。
 因语法较多，不定期更新总结。
 * 字体大小及颜色<br>
@@ -21,6 +23,8 @@ Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过
 * 位置<br>
     `<center>关于</center>` or `<div align=center>关于</div>`
 <br>如： <center>关于</center>
+<br> 解析截图如下：
+![right-resolution](/assets/images/right-resolution.png)
 
 -------
 未完待续...
