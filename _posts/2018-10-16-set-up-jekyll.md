@@ -5,7 +5,8 @@ comments: false
 date:   2018-10-16 23:36:13 +0800
 categories: jekyll update
 ---
-# Requirements before Setting up your Github Pages site locally with Jekyll
+
+# Requirements before setting up your Github Pages site locally with Jekyll
 
 * Step 1: 打开Mac的终端软件.
 * Step 2: 验证你的Mac是否已经安装了Ruby 2.1.0或者更高的版本：<br>
@@ -13,7 +14,7 @@ categories: jekyll update
     * Step 2.1: 如果已经安装，请直接进入第三步<br>
     `ruby 2.X.X`
     * Step 2.2: 如果你没有安装，请安装Ruby 2.1.0或者更高版本:
-      请参考[此网站](https://www.ruby-lang.org/en/downloads/)
+      请参考我的上一篇文档《MacOS安装Ruby运行环境》。
 * Step 3:安装bundler<br>
 `$ gem install bundler`
 * Step 4: 安装Git，这里我选择的是安装Git用指令操作，而不是Git桌面端。
