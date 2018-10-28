@@ -21,6 +21,7 @@ categories: jekyll update
 3. 通过在浏览器内输入`http://localhost:4000`预览你的本地Jekyll框架博客。
 
 -------
+
 1. Navigate into the root directory of your local Jekyll site repository. the name of the repository is the same with your repository cloned from Github.
 2. Run your Jekyll site locally.
     1. You need change your category to your repository site before you input your running instruction.<br>
