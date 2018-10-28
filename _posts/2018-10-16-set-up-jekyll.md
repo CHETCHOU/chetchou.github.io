@@ -14,7 +14,7 @@ categories: jekyll update
     * Step 2.1: 如果已经安装，请直接进入第三步<br>
     `ruby 2.X.X`
     * Step 2.2: 如果你没有安装，请安装Ruby 2.1.0或者更高版本:
-      请参考我的上一篇文档《MacOS安装Ruby运行环境》。
+      请参考我的上一篇文档[《MacOS安装Ruby运行环境》]（http://blog.chetchou.cn/jekyll/update/2018/10/16/set-up-ruby.html）。
 * Step 3:安装bundler<br>
 `$ gem install bundler`
 * Step 4: 安装Git，这里我选择的是安装Git用指令操作，而不是Git桌面端。
