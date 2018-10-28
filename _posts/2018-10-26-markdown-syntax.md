@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "[Markdown]Markdown语法汇总"
+title:  "【Markdown】Markdown语法汇总"
 comments: false
 date:   2018-10-26 01:00:13 +0800
 categories: jekyll update
