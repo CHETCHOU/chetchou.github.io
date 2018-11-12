@@ -25,10 +25,13 @@ github_username:  Chet CHOU
 # Build settings
 paginate: 4
 gems: ['jekyll-paginate']
-paginate_path: "home/page/:num/"
+paginate_path: "/home/page:num/"
 
 highlighter: rouge
-markdown: redcarpet
+markdown: kramdown
+kramdown:
+  extensions:
+    -generate_toc
 
 
 exclude: ['README.md', 'LICENSE', "*.bak"]

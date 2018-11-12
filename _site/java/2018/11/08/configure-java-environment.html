@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>【Java】win10配置Java环境 | CHOU</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="【Java】win10配置Java环境" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\Program Files\Java\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version" />
+<meta property="og:description" content="Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\Program Files\Java\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version" />
+<link rel="canonical" href="http://localhost:4000/java/2018/11/08/configure-java-environment.html" />
+<meta property="og:url" content="http://localhost:4000/java/2018/11/08/configure-java-environment.html" />
+<meta property="og:site_name" content="CHOU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-11-08T14:57:55+08:00" />
+<script type="application/ld+json">
+{"description":"Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\\Program Files\\Java\\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\\bin;%JAVA_HOME%\\jre\\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\\lib;%JAVA_HOME%\\lib\\dt.jar;%JAVA_HOME%\\lib\\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version","@type":"BlogPosting","url":"http://localhost:4000/java/2018/11/08/configure-java-environment.html","headline":"【Java】win10配置Java环境","dateModified":"2018-11-08T14:57:55+08:00","datePublished":"2018-11-08T14:57:55+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2018/11/08/configure-java-environment.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CHOU" /></head>
+<body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">【Java】win10配置Java环境</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-11-08T14:57:55+08:00" itemprop="datePublished">Nov 8, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="win10-配置java环境">Win10 配置java环境</h1>
+
+<h2 id="配置java环境前提">配置Java环境前提</h2>
+
+<p>配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html">下载地址</a></p>
+
+<p>笔者安装的是：<strong>jdk-8u191-windows-x64</strong> 版本。</p>
+
+<h2 id="配置java环境变量">配置Java环境变量</h2>
+
+<ol>
+  <li>
+    <h3 id="进入配置界面">进入配置界面</h3>
+
+    <p>右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。</p>
+
+    <p><img src="/assets/images/1541655901844.png" alt="1541655901844" /></p>
+  </li>
+  <li>
+    <h3 id="开始配置">开始配置</h3>
+
+    <p>新建系统变量，</p>
+
+    <p>变量名为：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>JAVA_HOME
+</code></pre></div>    </div>
+
+    <p>变量值为：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Java\jdk1.8.0_191
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/1541659170776.png" alt="1541659170776" /></p>
+
+    <p>编辑系统变量，在现有变量之前，加上：</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/1541659435688.png" alt="1541659435688" /></p>
+
+    <p>新建系统变量，变量名为</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CLASSPATH
+</code></pre></div>    </div>
+
+    <p>变量值为</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
+</code></pre></div>    </div>
+
+    <p><img src="/assets/images/1541659215120.png" alt="1541659215120" /></p>
+
+    <p>配置完成后，点击确定即可。</p>
+  </li>
+</ol>
+
+<h2 id="测试java环境是否配置成功">测试java环境是否配置成功</h2>
+
+<p>使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java
+</code></pre></div></div>
+
+<p><img src="/assets/images/1541654993660.png" alt="1541654993660" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac
+</code></pre></div></div>
+
+<p><img src="/assets/images/1541654855230.png" alt="1541654855230" /></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -version
+</code></pre></div></div>
+
+<p><img src="/assets/images/1541655088797.png" alt="1541655088797" /></p>
+
+
+  </div><a class="u-url" href="/java/2018/11/08/configure-java-environment.html" hidden></a>
+
+</article>
+      </div>
+
+    </main>
+  </body>
+
+</html>

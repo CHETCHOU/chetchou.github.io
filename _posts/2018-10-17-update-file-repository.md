@@ -3,7 +3,7 @@ layout: post
 title:  "【Git】如何更新Github远程仓库的某个文件/文件夹"
 comments: false
 date:   2018-10-17 23:36:13 +0800
-categories: jekyll update
+categories: Git
 ---
 
 # How to update a file/folder in the repository of Github

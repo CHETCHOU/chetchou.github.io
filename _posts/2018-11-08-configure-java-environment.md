@@ -3,12 +3,12 @@ layout: post
 title: "【Java】win10配置Java环境"
 date: 2018-11-08 14:57:55 +0800
 comments: false
-categories: jekyll update
+categories: java
 ---
 
 # Win10 配置java环境
 
-[TOC]
+{:toc}
 
 ## 配置Java环境前提
 

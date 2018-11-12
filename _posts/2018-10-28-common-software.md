@@ -3,7 +3,7 @@ layout: post
 title:  "【办公软件】常用办公软件下载方式汇总"
 comments: false
 date:   2018-10-28 11:00:13 +0800
-categories: jekyll update
+categories: software
 ---
 
 # 电脑重装系统后必备软件链接

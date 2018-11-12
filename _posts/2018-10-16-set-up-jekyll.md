@@ -3,7 +3,7 @@ layout: post
 title:  "【MacOS】教你如何安装Jekyll"
 comments: false
 date:   2018-10-16 23:36:13 +0800
-categories: jekyll update
+categories: [jekyll,MacOS]
 ---
 
 # Requirements before setting up your Github Pages site locally with Jekyll
