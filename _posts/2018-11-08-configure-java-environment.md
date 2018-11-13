@@ -3,7 +3,7 @@ layout: post
 title: "【Java】win10配置Java环境"
 date: 2018-11-08 14:57:55 +0800
 comments: false
-categories: java
+categories: Java
 ---
 
 # Win10 配置java环境
