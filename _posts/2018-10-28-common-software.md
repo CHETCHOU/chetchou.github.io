@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【办公软件】常用办公软件下载方式汇总"
+title:  "常用办公软件下载方式汇总"
 comments: false
 date:   2018-10-28 11:00:13 +0800
 categories: Software
@@ -16,7 +16,7 @@ categories: Software
 3. 微信桌面客户端就没啥要说的了.<br>[点击下载](https://pc.weixin.qq.com/?_blank)
 4. WPS版本最新版已经更新到2019版了，但是实际体验不好，广告甚多。因此推荐下载WPS Office 2016版。<br>[点击下载](http://www.wps.cn/product/wps2016/?from=www.wps.cn/?_blank)
 5. Office系列产品推荐上[MSDN i tell you](https://msdn.itellyou.cn/?_blank) 上下载，所有链接均为正版，版本较全。选择对应版本后，复制选择的磁力下载链接，打开[迅雷下载](http://x.xunlei.com/?_blank)工具即可下载。
-6. 输入法本人推荐手心输入法，相对于搜狗输入法来说，手心输入法没有广告，功能和搜狗相差无几，有助于提高工作效率。<br>[点此下载](http://www.xinshuru.com/index.html/?_blank)
+6. 输入法本人推荐手心输入法，相对于搜狗输入法来说，手心输入法没有广告，功能和搜狗相差无几，有助于提高工作效率。<br>[点此下载](http://www.xinshuru.com/?_blank)
 
 -------
 未完待续。。。

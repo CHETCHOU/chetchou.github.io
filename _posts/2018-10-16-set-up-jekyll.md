@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【MacOS】教你如何安装Jekyll"
+title:  "教你如何安装Jekyll"
 comments: false
 date:   2018-10-16 23:36:13 +0800
 categories: [Jekyll,MacOS]

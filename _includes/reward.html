@@ -1,0 +1,29 @@
+	<!-- Button to trigger modal -->
+	<a id="reward-trigger" href="#myModal" role="button" class="btn btn-default" data-toggle="modal">赏</a>
+	 
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">客官，打赏一下再走呗~</h3>
+	  </div>
+	  <div class="modal-body">
+	    <div class="reward-code">
+			<input type="image" id="rewardCode" src="/assets/img/wechatpay.jpg" alt="Submit"/>
+			<p class="text-center"><strong>支持申请退款</strong></p>
+			<p class="text-center">如需退款，请点击网站下方邮件链接，附上打赏渠道、打赏账号及收款码，7日内即可完成退款。</p>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	  	<div id="switch-btn" class="btn-group" data-toggle="buttons">
+		  	<input type="button" id="wechatpay" class="btn btn-primary active" value="wechat" onclick="changeImg(this)"/>
+			<input type="button" id="alipay"  class="btn btn-primary" value="alipay" onclick="changeImg(this)"/>
+		</div>
+	  </div>
+	</div>
+
+	<!--javascript-->
+  	<script src="http://code.jquery.com/jquery.js"></script>
+  	<script src="/assets/js/bootstrap.min.js"></script>
+
+    <script language="javascript"  type="text/javascript" src="/assets/js/switch-reward.js"></script>

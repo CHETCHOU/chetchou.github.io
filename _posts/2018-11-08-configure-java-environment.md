@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "【Java】win10配置Java环境"
+title: "win10配置Java环境"
 date: 2018-11-08 14:57:55 +0800
 comments: false
 categories: Java
@@ -22,7 +22,7 @@ categories: Java
 
    右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）...”，如图所示。
 
-   ![1541655901844](/assets/images/1541655901844.png)
+   ![1541655901844](/assets/img/1541655901844.png)
 
 2. ### 开始配置
 
@@ -40,7 +40,7 @@ categories: Java
    C:\Program Files\Java\jdk1.8.0_191
    ```
 
-   ![1541659170776](/assets/images/1541659170776.png)
+   ![1541659170776](/assets/img/1541659170776.png)
 
    编辑系统变量，在现有变量之前，加上：
 
@@ -48,7 +48,7 @@ categories: Java
    %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
    ```
 
-   ![1541659435688](/assets/images/1541659435688.png)
+   ![1541659435688](/assets/img/1541659435688.png)
 
    新建系统变量，变量名为
 
@@ -62,7 +62,7 @@ categories: Java
    .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
    ```
 
-   ![1541659215120](/assets/images/1541659215120.png)
+   ![1541659215120](/assets/img/1541659215120.png)
 
    配置完成后，点击确定即可。
 
@@ -74,19 +74,19 @@ categories: Java
 java
 ```
 
-![1541654993660](/assets/images/1541654993660.png)
+![1541654993660](/assets/img/1541654993660.png)
 
 ```
 javac
 ```
 
-![1541654855230](/assets/images/1541654855230.png)
+![1541654855230](/assets/img/1541654855230.png)
 
 ```
 java -version
 ```
 
-![1541655088797](/assets/images/1541655088797.png)
+![1541655088797](/assets/img/1541655088797.png)
 
 
 

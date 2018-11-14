@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Markdown】Markdown语法汇总"
+title:  "Markdown语法汇总"
 comments: false
 date:   2018-10-26 01:00:13 +0800
 categories: Markdown
@@ -24,7 +24,7 @@ Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过
     `<center>关于</center>` or `<div align=center>关于</div>`
 <br>如： <center>关于</center>
 <br> 解析截图如下：
-![right-resolution](/assets/images/right-resolution.png)
+![right-resolution](/assets/img/right-resolution.png)
 
 -------
 未完待续...

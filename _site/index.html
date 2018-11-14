@@ -32,7 +32,10 @@
   </script>
 
   <!-- End Jekyll SEO tag -->
-  <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+  <link rel="stylesheet" href="/assets/main.css">
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your awesome title" />
+
+  <script type="text/javascript" src="/assets/js/auto-iframe.js"></script>
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -60,8 +63,9 @@
 
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
-      <iframe id="iframe0" frameborder="0" class="main-frame" name="TargetIframe" onload="javascript:this.height=this.contentWindow.document.body.scrollHeight" src="/home/"> 
-      </iframe>
+      <iframe src="/home/" class="main-frame" name="TargetIframe" frameborder="0" scrolling="no" id="external-frame" onload="setIframeHeight(this)"></iframe>
+      <!--<iframe id="iframe0" frameborder="0" class="main-frame" name="TargetIframe" onload="javascript:this.height=this.contentWindow.document.body.scrollHeight" src="/home/"> 
+      </iframe>-->
     </div>
   </main>
 <footer class="site-footer h-card">

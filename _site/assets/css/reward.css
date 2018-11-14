@@ -1,0 +1,29 @@
+#rewardCode{
+	margin: 0 auto;
+	display: table;
+	float: center;
+	width: 300px;
+	height: 320px;
+}
+
+#switch-btn{
+	float: none;
+    display: table;
+    margin: 0 auto;
+}
+
+#reward-trigger{
+	width:30px;
+	height:30px;
+	font-size:20px;
+	-moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+	background: #DC143C;
+	color:#fff;
+}
+
+#reward-trigger:hover {
+	background: #333; 
+	color:#e75616;
+}

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【Jekyll】如何本地运行Jekyll框架博客"
+title:  "如何本地运行Jekyll框架博客"
 date:   2018-10-23 23:36:13 +0800
 comments: false
 categories: Jekyll

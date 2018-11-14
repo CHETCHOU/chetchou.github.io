@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "【MacOS】Sublime Text3 快捷键汇总"
+title:  "Sublime Text3 快捷键汇总"
 comments: false
 date:   2018-10-25 13:36:13 +0800
 categories: Sublime

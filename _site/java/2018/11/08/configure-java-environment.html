@@ -2,10 +2,14 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>【Java】win10配置Java环境 | CHOU</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/reward.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>win10配置Java环境 | CHOU</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="【Java】win10配置Java环境" />
+<meta property="og:title" content="win10配置Java环境" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\Program Files\Java\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version" />
 <meta property="og:description" content="Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\Program Files\Java\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\bin;%JAVA_HOME%\jre\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version" />
@@ -15,7 +19,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-11-08T14:57:55+08:00" />
 <script type="application/ld+json">
-{"description":"Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\\Program Files\\Java\\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\\bin;%JAVA_HOME%\\jre\\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\\lib;%JAVA_HOME%\\lib\\dt.jar;%JAVA_HOME%\\lib\\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version","@type":"BlogPosting","url":"http://localhost:4000/java/2018/11/08/configure-java-environment.html","headline":"【Java】win10配置Java环境","dateModified":"2018-11-08T14:57:55+08:00","datePublished":"2018-11-08T14:57:55+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2018/11/08/configure-java-environment.html"},"@context":"http://schema.org"}</script>
+{"description":"Win10 配置java环境 配置Java环境前提 配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。下载地址 笔者安装的是：jdk-8u191-windows-x64 版本。 配置Java环境变量 进入配置界面 右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。 开始配置 新建系统变量， 变量名为： JAVA_HOME 变量值为： C:\\Program Files\\Java\\jdk1.8.0_191 编辑系统变量，在现有变量之前，加上： %JAVA_HOME%\\bin;%JAVA_HOME%\\jre\\bin; 新建系统变量，变量名为 CLASSPATH 变量值为 .;%JAVA_HOME%\\lib;%JAVA_HOME%\\lib\\dt.jar;%JAVA_HOME%\\lib\\tools.jar 配置完成后，点击确定即可。 测试java环境是否配置成功 使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。 java javac java -version","@type":"BlogPosting","url":"http://localhost:4000/java/2018/11/08/configure-java-environment.html","headline":"win10配置Java环境","dateModified":"2018-11-08T14:57:55+08:00","datePublished":"2018-11-08T14:57:55+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/java/2018/11/08/configure-java-environment.html"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CHOU" /></head>
 <body>
@@ -25,7 +29,7 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">【Java】win10配置Java环境</h1>
+    <h1 class="post-title p-name" itemprop="name headline">win10配置Java环境</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2018-11-08T14:57:55+08:00" itemprop="datePublished">Nov 8, 2018
       </time></p>
@@ -48,7 +52,7 @@
 
     <p>右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。</p>
 
-    <p><img src="/assets/images/1541655901844.png" alt="1541655901844" /></p>
+    <p><img src="/assets/img/1541655901844.png" alt="1541655901844" /></p>
   </li>
   <li>
     <h3 id="开始配置">开始配置</h3>
@@ -65,14 +69,14 @@
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:\Program Files\Java\jdk1.8.0_191
 </code></pre></div>    </div>
 
-    <p><img src="/assets/images/1541659170776.png" alt="1541659170776" /></p>
+    <p><img src="/assets/img/1541659170776.png" alt="1541659170776" /></p>
 
     <p>编辑系统变量，在现有变量之前，加上：</p>
 
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;
 </code></pre></div>    </div>
 
-    <p><img src="/assets/images/1541659435688.png" alt="1541659435688" /></p>
+    <p><img src="/assets/img/1541659435688.png" alt="1541659435688" /></p>
 
     <p>新建系统变量，变量名为</p>
 
@@ -84,7 +88,7 @@
     <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar
 </code></pre></div>    </div>
 
-    <p><img src="/assets/images/1541659215120.png" alt="1541659215120" /></p>
+    <p><img src="/assets/img/1541659215120.png" alt="1541659215120" /></p>
 
     <p>配置完成后，点击确定即可。</p>
   </li>
@@ -97,25 +101,53 @@
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java
 </code></pre></div></div>
 
-<p><img src="/assets/images/1541654993660.png" alt="1541654993660" /></p>
+<p><img src="/assets/img/1541654993660.png" alt="1541654993660" /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>javac
 </code></pre></div></div>
 
-<p><img src="/assets/images/1541654855230.png" alt="1541654855230" /></p>
+<p><img src="/assets/img/1541654855230.png" alt="1541654855230" /></p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>java -version
 </code></pre></div></div>
 
-<p><img src="/assets/images/1541655088797.png" alt="1541655088797" /></p>
+<p><img src="/assets/img/1541655088797.png" alt="1541655088797" /></p>
 
 
   </div><a class="u-url" href="/java/2018/11/08/configure-java-environment.html" hidden></a>
 
 </article>
       </div>
-
     </main>
+    <div class="text-center">	<!-- Button to trigger modal -->
+	<a id="reward-trigger" href="#myModal" role="button" class="btn btn-default" data-toggle="modal">赏</a>
+	 
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">客官，打赏一下再走呗~</h3>
+	  </div>
+	  <div class="modal-body">
+	    <div class="reward-code">
+			<input type="image" id="rewardCode" src="/assets/img/wechatpay.jpg" alt="Submit"/>
+			<p class="text-center"><strong>支持申请退款</strong></p>
+			<p class="text-center">如需退款，请点击网站下方邮件链接，附上打赏渠道、打赏账号及收款码，7日内即可完成退款。</p>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	  	<div id="switch-btn" class="btn-group" data-toggle="buttons">
+		  	<input type="button" id="wechatpay" class="btn btn-primary active" value="wechat" onclick="changeImg(this)"/>
+			<input type="button" id="alipay"  class="btn btn-primary" value="alipay" onclick="changeImg(this)"/>
+		</div>
+	  </div>
+	</div>
+
+	<!--javascript-->
+  	<script src="http://code.jquery.com/jquery.js"></script>
+  	<script src="/assets/js/bootstrap.min.js"></script>
+
+    <script language="javascript"  type="text/javascript" src="/assets/js/switch-reward.js"></script></div>
   </body>
 
 </html>
