@@ -4,6 +4,7 @@ title:  "Disqus评论系统无法加载的忧伤"
 comments: false
 date:   2018-10-24 23:36:13 +0800
 categories: [Jekyll,Disqus]
+tags: [Disqus,Jekyll]
 ---
 
 Jekyll默认是支持Disqus评论功能，个人也比较喜欢Disqus的界面设计。

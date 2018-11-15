@@ -4,6 +4,7 @@ title: "win10配置Java环境"
 date: 2018-11-08 14:57:55 +0800
 comments: false
 categories: Java
+tags: [Java,Win10]
 ---
 
 # Win10 配置java环境

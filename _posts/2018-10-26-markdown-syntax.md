@@ -4,6 +4,7 @@ title:  "Markdown语法汇总"
 comments: false
 date:   2018-10-26 01:00:13 +0800
 categories: Markdown
+tags: [Markdown,Syntax]
 ---
 
 **Jekyll暂时没有正常解析Mardown文本，MWeb上预览效果正常，但是上传到Github上解析出来一塌糊涂，大家欢迎提意见。**
