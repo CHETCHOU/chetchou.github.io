@@ -4,6 +4,7 @@ title:  "欢迎来到Jekyll"
 comments: false
 date:   2018-10-15 23:36:13 +0800
 categories: Jekyll
+tags: [Jekyll]
 ---
 
 # 欢迎使用Jekyll建立blog
