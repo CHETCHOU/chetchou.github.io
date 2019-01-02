@@ -1,0 +1,55 @@
+---
+layout: default_boots
+title: Archives
+---
+
+<div class="archive">
+	<h1 class="page-heading">{{ page.title}}</h1>
+      
+      <div class="panel panel-default">      
+      {%for post in site.posts %}
+        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+        {% capture nyear %}{{ post.previous.date | date: '%Y' }}{% endcapture %}        
+        {% if forloop.first %}
+          <div class="panel-heading">
+            <h3 class="panel-title">{{ year }}</h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <li>
+                <span class="post-date">
+                  {% assign date_format = site.date_format.archive| default: "%d - %b" %}
+                  {{ post.date | date: date_format }} 
+                </span>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+              </li>
+        {% endif %}
+        {% if forloop.last %}
+            </ul>
+          </div>
+        </div> 
+        {% else %}       
+        {% if nyear != year %}           
+        </ul>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ nyear }}</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+          {% endif %}       
+          <li>
+            <span class="post-date">
+              {% assign date_format = site.date_format.archive| default: "%d - %b" %}
+              {{ post.previous.date | date: date_format }} 
+            </span>
+            <a href="{{ post.previous.url }}">{{ post.previous.title }}</a>
+          </li>        
+        {% endif %} 
+      {% endfor %}
+</div>
+
+
+

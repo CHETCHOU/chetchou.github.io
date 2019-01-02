@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/reward.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Liquid语法笔记 | CHOU</title>
+<meta name="generator" content="Jekyll v3.7.4" />
+<meta property="og:title" content="Liquid语法笔记" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Liquid语法笔记 可参考Liquid模板中文文档：点击参考" />
+<meta property="og:description" content="Liquid语法笔记 可参考Liquid模板中文文档：点击参考" />
+<link rel="canonical" href="http://localhost:4000/jekyll/liquid/2017/12/26/liquid-syntax.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/liquid/2017/12/26/liquid-syntax.html" />
+<meta property="og:site_name" content="CHOU" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-26T20:36:13+08:00" />
+<script type="application/ld+json">
+{"description":"Liquid语法笔记 可参考Liquid模板中文文档：点击参考","@type":"BlogPosting","url":"http://localhost:4000/jekyll/liquid/2017/12/26/liquid-syntax.html","headline":"Liquid语法笔记","dateModified":"2017-12-26T20:36:13+08:00","datePublished":"2017-12-26T20:36:13+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/liquid/2017/12/26/liquid-syntax.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="CHOU" /></head>
+<body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Liquid语法笔记</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-26T20:36:13+08:00" itemprop="datePublished">Dec 26, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="liquid语法笔记">Liquid语法笔记</h1>
+<p>可参考Liquid模板中文文档：<a href="https://liquid.bootcss.com">点击参考</a></p>
+
+<p>Liquid代码主要分为对象（Object），标记（Tag）和过滤器（Fliter）。</p>
+
+<p>Tag
+目前支持的Tag：</p>
+<ul>
+  <li>assign - 定义变量</li>
+  <li>capture - 变量赋值</li>
+  <li>include - 引入模板</li>
+</ul>
+
+<p>forloop.first       # =&gt; 是否是第一次迭代?
+forloop.last        # =&gt; 是否是最后一次迭代?
+——-
+未完待续。。。</p>
+
+  </div><a class="u-url" href="/jekyll/liquid/2017/12/26/liquid-syntax.html" hidden></a>
+
+</article>
+      </div>
+    </main>
+    <div class="text-center">	<!-- Button to trigger modal -->
+	<a id="reward-trigger" href="#myModal" role="button" class="btn btn-default" data-toggle="modal">赏</a>
+	 
+	<!-- Modal -->
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+	    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	    <h3 id="myModalLabel">客官，打赏一下再走呗~</h3>
+	  </div>
+	  <div class="modal-body">
+	    <div class="reward-code">
+			<input type="image" id="rewardCode" src="/assets/img/wechatpay.jpg" alt="Submit"/>
+			<p class="text-center"><strong>支持申请退款</strong></p>
+			<p class="text-center">如需退款，请点击网站下方邮件链接，附上打赏渠道、打赏账号及收款码，7日内即可完成退款。</p>
+		</div>
+	  </div>
+	  <div class="modal-footer">
+	  	<div id="switch-btn" class="btn-group" data-toggle="buttons">
+		  	<input type="button" id="wechatpay" class="btn btn-primary active" value="wechat" onclick="changeImg(this)"/>
+			<input type="button" id="alipay"  class="btn btn-primary" value="alipay" onclick="changeImg(this)"/>
+		</div>
+	  </div>
+	</div>
+
+	<!--javascript-->
+  	<script src="http://code.jquery.com/jquery.js"></script>
+  	<script src="/assets/js/bootstrap.min.js"></script>
+
+    <script language="javascript"  type="text/javascript" src="/assets/js/switch-reward.js"></script></div>
+  </body>
+
+</html>
