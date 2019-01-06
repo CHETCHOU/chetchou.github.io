@@ -13,12 +13,12 @@
 }
 
 #reward-trigger{
-	width:30px;
-	height:30px;
+	width:60px;
+	height:60px;
 	font-size:20px;
-	-moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    border-radius: 15px;
+	-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
 	background: #DC143C;
 	color:#fff;
 }
