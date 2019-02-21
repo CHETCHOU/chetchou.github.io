@@ -2,7 +2,7 @@
 layout: post
 title:  "计划组织能力之培训"
 comments: false
-date:   2019-2-21 23:06:13 +0800
+date:   2019-02-21 23:06:13 +0800
 categories: 结构化面试
 ---
 
