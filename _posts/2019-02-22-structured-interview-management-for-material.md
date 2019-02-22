@@ -3,7 +3,7 @@ layout: post
 title:  "材料阅读(一)"
 comments: false
 date:   2019-02-22 19:47:13 +0800
-categories: 结构化面试
+categories: interview
 ---
 
 材料一:
