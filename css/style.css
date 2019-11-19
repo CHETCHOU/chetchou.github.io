@@ -187,6 +187,11 @@ body {
     margin: 0 0.833333333333333%;
   }
 }
+@media screen and (min-width: 768px) {
+  #main {
+    float: right;
+  }
+}
 .article-date,
 .article-category-link,
 .archive-year,
@@ -1090,6 +1095,7 @@ a.article-title:hover {
 #footer-info {
   line-height: 1.6em;
   font-size: 0.85em;
+  text-align: center;
 }
 .article-entry pre,
 .article-entry .highlight {
