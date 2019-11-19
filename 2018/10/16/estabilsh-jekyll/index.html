@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+<!-- Baidu Analytics -->
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c2a157efda747a85bbb0d7dfddae3899";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<!-- End Baidu Analytics -->
+
+
+  
+  <title>教你如何安装Jekyll | CHOU&#39;s blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Requirements before setting up your Github Pages site locally with Jekyll Step 1: 打开Mac的终端软件.  Step 2: 验证你的Mac是否已经安装了Ruby 2.1.0或者更高的版本：  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$ ruby --version  Ste">
+<meta name="keywords" content="Jekyll,Blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="教你如何安装Jekyll">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2018&#x2F;10&#x2F;16&#x2F;estabilsh-jekyll&#x2F;index.html">
+<meta property="og:site_name" content="CHOU&#39;s blogs">
+<meta property="og:description" content="Requirements before setting up your Github Pages site locally with Jekyll Step 1: 打开Mac的终端软件.  Step 2: 验证你的Mac是否已经安装了Ruby 2.1.0或者更高的版本：  &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;$ ruby --version  Ste">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-19T12:14:12.142Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="CHOU&#39;s blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">CHOU&#39;s blogs</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">随心随性</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">Categories</a>
+        
+          <a class="main-nav-link" href="/">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-estabilsh-jekyll" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/16/estabilsh-jekyll/" class="article-date">
+  <time datetime="2018-10-16T15:36:13.000Z" itemprop="datePublished">2018-10-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Jekyll/">Jekyll</a>►<a class="article-category-link" href="/categories/Jekyll/MacOS/">MacOS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      教你如何安装Jekyll
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Requirements-before-setting-up-your-Github-Pages-site-locally-with-Jekyll"><a href="#Requirements-before-setting-up-your-Github-Pages-site-locally-with-Jekyll" class="headerlink" title="Requirements before setting up your Github Pages site locally with Jekyll"></a>Requirements before setting up your Github Pages site locally with Jekyll</h1><ul>
+<li><p>Step 1: 打开Mac的终端软件.</p>
+</li>
+<li><p>Step 2: 验证你的Mac是否已经安装了Ruby 2.1.0或者更高的版本：<br><br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$ ruby --version</code></p>
+<ul>
+<li>Step 2.1: 如果已经安装，请直接进入第三步<br><br><code>ruby 2.X.X</code></li>
+<li>Step 2.2: 如果你没有安装，请安装Ruby 2.1.0或者更高版本:<br>请参考我的上一篇文档<a href="http://blog.chetchou.cn/jekyll/update/2018/10/16/set-up-ruby.html" target="_blank" rel="noopener">《MacOS安装Ruby运行环境》</a>。</li>
+</ul>
+</li>
+<li><p>Step 3:安装bundler<br><br><code>$ gem install bundler</code></p>
+</li>
+<li><p>Step 4: 安装Git，这里我选择的是安装Git用指令操作，而不是Git桌面端。</p>
+<ol>
+<li>下载并安装最新版的Git.<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">click here</a></li>
+<li>配置Git的用户名.<a href="https://help.github.com/articles/setting-your-username-in-git/" target="_blank" rel="noopener">click here</a></li>
+<li>配置Git的邮箱.<a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/" target="_blank" rel="noopener">click here</a><br><br><strong>PS：</strong>然而，我在安装的时候似乎没有配置用户名和邮箱<br><br>然后，你可以从Github主页上克隆你的仓库文件到本地。<br></li>
+</ol>
+</li>
+<li><p>Step 5: 通过Bundler安装Jekyll<br>  To track your site’s dependencies, Ruby will use the contents of your Gemfile to build your Jekyll site.</p>
+<ol>
+<li><p>验证你的本地Jekyll网页仓库中是否有Gemfile文件:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">Gemfile</span><br></pre></td></tr></table></figure>
+<p> 如果仓库中有Gemfile文件,跳到step 4. 如果没有，则跳到step 2.</p>
+</li>
+<li><p>如果仓库中没有Gemfile文件,打开文本编辑器,如Atom或sublime Text,新建一个文件加入如下命令行:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
+<li><p>把新建的文件命名为Gemfile并保存到你的本地Jekyll网页仓库的根目录中，跳到 step 5 准备安装Jekyll.</p>
+</li>
+<li><p>如果你已经有一个Gemfile，打开你的文本编辑器，如Atom或者Submit Text3，把如下几行代码加入你的Gemfile文件:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
+<li><p>从Github Pages gem安装Jekyll及其它依赖文件:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br><span class="line">Fetching gem metadata from https://rubygems.org/............</span><br><span class="line">Fetching version metadata from https://rubygems.org/...</span><br><span class="line">Fetching dependency metadata from https://rubygems.org/..</span><br><span class="line">Resolving dependencies...</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<p>想获得更详细的教程，请参考 <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll" target="_blank" rel="noopener">此文档</a></p>
+<hr>
+<ul>
+<li><p>Step 1: Open terminal.</p>
+</li>
+<li><p>Step 2: Check whether you have Ruby 2.1.0 or higher installed:<br><br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$ ruby --version</code></p>
+<ul>
+<li>Step 2.1: if you already have, Skip to Step 4:<br><br><code>ruby 2.X.X</code></li>
+<li>Step 2.2: if you don’t have:<br>Please refer to <a href="https://www.ruby-lang.org/en/downloads/" target="_blank" rel="noopener">this site</a>   </li>
+</ul>
+</li>
+<li><p>Step 3:install bundler<br><br><code>$ gem install bundler</code></p>
+</li>
+<li><p>Step 4: set up Git</p>
+<ol>
+<li>Download and install the latest version of Git.<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">click here</a></li>
+<li>Set your username in Git.<a href="https://help.github.com/articles/setting-your-username-in-git/" target="_blank" rel="noopener">click here</a></li>
+<li>Set your commit email address in Git.<a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/" target="_blank" rel="noopener">click here</a><br><br><strong>However, I don’t think the last two steps in setting up git is necessary</strong><br><br>then, you can clone your repository from your Github.</li>
+</ol>
+</li>
+<li><p>Step 5: Install Jekyll using Bundler<br>  To track your site’s dependencies, Ruby will use the contents of your Gemfile to build your Jekyll site.</p>
+<ol>
+<li><p>Check to see if you have a Gemfile in your local Jekyll site repository:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">Gemfile</span><br></pre></td></tr></table></figure>
+<p> If you have a Gemfile, skip to step 4. If you don’t have a Gemfile, skip to step 2.</p>
+</li>
+<li><p>If you don’t have a Gemfile, open your favorite text editor, such as Atom, and add these lines to a new file:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
+<li><p>Name the file Gemfile and save it to the root directory of your local Jekyll site repository. Skip to step 5 to install Jekyll.</p>
+</li>
+<li><p>If you already have a Gemfile, open your favorite text editor, such as Atom or Submit Text3, and add these lines to your Gemfile:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
+<li><p>Install Jekyll and other dependencies from the GitHub Pages gem:<br></p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br><span class="line">Fetching gem metadata from https://rubygems.org/............</span><br><span class="line">Fetching version metadata from https://rubygems.org/...</span><br><span class="line">Fetching dependency metadata from https://rubygems.org/..</span><br><span class="line">Resolving dependencies...</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+</li>
+</ul>
+<p>You can want to read more, please refer to this <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll" target="_blank" rel="noopener">specific instruction</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/16/estabilsh-jekyll/" data-id="ck35tidy4000lyg9udig85rfg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/" rel="tag">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Jekyll/" rel="tag">Jekyll</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/10/24/inaccessible-disqus/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Disqus评论系统无法加载
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/MacOS/">MacOS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/">Jekyll</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/Disqus/">Disqus</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Jekyll/MacOS/">MacOS</a><span class="category-list-count">1</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shadowsocks/">Shadowsocks</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Shadowsocks/Bandwagon/">Bandwagon</a><span class="category-list-count">1</span></li></ul></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/" rel="tag">Blog</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/" rel="tag">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Disqus/" rel="tag">Disqus</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Jekyll/" rel="tag">Jekyll</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shadowsocks/" rel="tag">Shadowsocks</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VPN/" rel="tag">VPN</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Disqus/" style="font-size: 10px;">Disqus</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Jekyll/" style="font-size: 20px;">Jekyll</a> <a href="/tags/Shadowsocks/" style="font-size: 10px;">Shadowsocks</a> <a href="/tags/VPN/" style="font-size: 10px;">VPN</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a><span class="archive-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/19/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/19/install-hexo/">Mac安装Hexo详解</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/19/establish-shadowsocks/">如何查看SS开启了哪些端口？</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/24/inaccessible-disqus/">Disqus评论系统无法加载</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/16/estabilsh-jekyll/">教你如何安装Jekyll</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Chet Chou<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
