@@ -995,165 +995,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/16/set-up-ruby/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chet Chou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHOU's blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/16/set-up-ruby/" itemprop="url">MacOS安装Ruby运行环境</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T23:36:13+08:00">
-                2018-10-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ruby/" itemprop="url" rel="index">
-                    <span itemprop="name">Ruby</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Ruby/MacOS/" itemprop="url" rel="index">
-                    <span itemprop="name">MacOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="MacOS安装Ruby运行环境"><a href="#MacOS安装Ruby运行环境" class="headerlink" title="MacOS安装Ruby运行环境"></a>MacOS安装Ruby运行环境</h1><p>MacOS需要使用第三方工具安装Ruby，有rbenv和rvm。在这里我们选择的是RVM工具安装Ruby。不要问为什么，RVM的全称是Ruby Version Management。安装Ruby非常繁琐，稍有不慎就会安装失败。</p>
-<ol>
-<li>安装Xcode<br> 直接在App Store中搜索Xcode，下载安装。安装完成后，系统自动安装好 Unix 环境需要的开发包。</li>
-<li>安装RVM<br> 打开终端APP，输入安装代码，全篇若出现“You don’t have write permission…”，则在代码前面加上sudo+空格，用管理员运行代码。<br> 安装RVM代码如下：<br><br> <code>$ curl -L https://get.rvm.io | bash -s stable</code><br> 然后等待安装，中间可能会需要输入password，输入电脑的登陆密码即可，密码输入过程中不显示字符，不要慌，勇敢输入，然后回车即可。<br> 成功安装RVM后，输入以下代码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.rvm/scripts/rvm</span><br><span class="line">（-------------------会出现横杠，然后继续输入下一行指令）</span><br><span class="line">$ rvm -v</span><br></pre></td></tr></table></figure>
- <br>输入完成后，会出现一串代码，结束后，继续第3步。</li>
-<li>通过RVM安装Ruby<br>输入下列指令，获取ruby的版本。<br><br><code>$ rvm list known</code><br><br>列出ruby版本后，选取一个Ruby 2.1.0或者更高的版本。<br><br><code>$  rvm install 2.1.0</code><br><br>可替换2.1.0成更高的版本号，我的Ruby是2.3.7版本。<br><br>等待运行完毕，Ruby和Ruby gems就都安装好了。</li>
-<li>Ruby版本设置<br> 输入下列指令，设置安装的Ruby版本为系统默认版本。<br><br> <code>$ rvm 2.1.0 --default</code><br> <br>检测当前版本<br><br> <code>$ ruby -v</code><br> <br>返回如下：<br><br> <code>ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin18]</code><br> <br>验证gem版本<br><br> <code>$ gem -v</code><br> <br>返回如下：<br><br> <code>2.5.2.3</code></li>
-<li>替换源网址<br> 因为没太理解为啥要替换源网址，源网址在什么时候会发挥作用，所以我暂时没改。如果需要改的话，还请高人指点为什么要修改。</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/16/set-up-jekyll/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1333,6 +1174,165 @@
 </li>
 </ul>
 <p>You can want to read more, please refer to this <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll" target="_blank" rel="noopener">specific instruction</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/16/set-up-ruby/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/16/set-up-ruby/" itemprop="url">MacOS安装Ruby运行环境</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T23:36:13+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ruby/" itemprop="url" rel="index">
+                    <span itemprop="name">Ruby</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ruby/MacOS/" itemprop="url" rel="index">
+                    <span itemprop="name">MacOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="MacOS安装Ruby运行环境"><a href="#MacOS安装Ruby运行环境" class="headerlink" title="MacOS安装Ruby运行环境"></a>MacOS安装Ruby运行环境</h1><p>MacOS需要使用第三方工具安装Ruby，有rbenv和rvm。在这里我们选择的是RVM工具安装Ruby。不要问为什么，RVM的全称是Ruby Version Management。安装Ruby非常繁琐，稍有不慎就会安装失败。</p>
+<ol>
+<li>安装Xcode<br> 直接在App Store中搜索Xcode，下载安装。安装完成后，系统自动安装好 Unix 环境需要的开发包。</li>
+<li>安装RVM<br> 打开终端APP，输入安装代码，全篇若出现“You don’t have write permission…”，则在代码前面加上sudo+空格，用管理员运行代码。<br> 安装RVM代码如下：<br><br> <code>$ curl -L https://get.rvm.io | bash -s stable</code><br> 然后等待安装，中间可能会需要输入password，输入电脑的登陆密码即可，密码输入过程中不显示字符，不要慌，勇敢输入，然后回车即可。<br> 成功安装RVM后，输入以下代码： <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ source ~/.rvm/scripts/rvm</span><br><span class="line">（-------------------会出现横杠，然后继续输入下一行指令）</span><br><span class="line">$ rvm -v</span><br></pre></td></tr></table></figure>
+ <br>输入完成后，会出现一串代码，结束后，继续第3步。</li>
+<li>通过RVM安装Ruby<br>输入下列指令，获取ruby的版本。<br><br><code>$ rvm list known</code><br><br>列出ruby版本后，选取一个Ruby 2.1.0或者更高的版本。<br><br><code>$  rvm install 2.1.0</code><br><br>可替换2.1.0成更高的版本号，我的Ruby是2.3.7版本。<br><br>等待运行完毕，Ruby和Ruby gems就都安装好了。</li>
+<li>Ruby版本设置<br> 输入下列指令，设置安装的Ruby版本为系统默认版本。<br><br> <code>$ rvm 2.1.0 --default</code><br> <br>检测当前版本<br><br> <code>$ ruby -v</code><br> <br>返回如下：<br><br> <code>ruby 2.3.7p456 (2018-03-28 revision 63024) [universal.x86_64-darwin18]</code><br> <br>验证gem版本<br><br> <code>$ gem -v</code><br> <br>返回如下：<br><br> <code>2.5.2.3</code></li>
+<li>替换源网址<br> 因为没太理解为啥要替换源网址，源网址在什么时候会发挥作用，所以我暂时没改。如果需要改的话，还请高人指点为什么要修改。</li>
+</ol>
 
           
         
