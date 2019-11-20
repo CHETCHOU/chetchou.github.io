@@ -402,6 +402,193 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/establish-shadowsocks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/19/establish-shadowsocks/" itemprop="url">如何查看SS开启了哪些端口？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T00:00:00+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shadowsocks/" itemprop="url" rel="index">
+                    <span itemprop="name">Shadowsocks</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shadowsocks/Bandwagon/" itemprop="url" rel="index">
+                    <span itemprop="name">Bandwagon</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h4><ol>
+<li>自动安装SS，代码如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&amp;gt;&amp;amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
+
+<p>2.根据提示逐步设置ss类型，密码，端口，加密类型等，根据需要选择，不懂的话默认回车。特别注意，ios终端有些软件不支持shadowsocksR，谨慎选择。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Which Shadowsocks server you’d select:</span><br><span class="line">1) Shadowsocks-Python</span><br><span class="line">2) ShadowsocksR</span><br><span class="line">3) Shadowsocks-Go</span><br><span class="line">4) Shadowsocks-libev</span><br><span class="line">Please enter a number</span><br><span class="line">(Default Shadowsocks-Python):1</span><br><span class="line">You choose = Shadowsocks-Python</span><br><span class="line"></span><br><span class="line">Please enter password for Shadowsocks-Python</span><br><span class="line">(Default password: teddysun.com):123456</span><br><span class="line"></span><br><span class="line">password = 123456</span><br><span class="line"></span><br><span class="line">Please enter a port for Shadowsocks-Python [1-65535]</span><br><span class="line">(Default port: 11260):10086</span><br><span class="line"></span><br><span class="line">port = 10086</span><br></pre></td></tr></table></figure>
+<p>3.按照提示输入完成，命令执行完后会出来SS通道信息。如下所示：（可以复制保存一下）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">INFO: loading config from /etc/shadowsocks-python/config.json2019-03-28 05:14:24 INFO     loading libcrypto from libcrypto.so.10Starting Shadowsocks successCongratulations, Shadowsocks-Python server install completed!</span><br><span class="line">Your Server IP        :  123.234.222.210</span><br><span class="line">Your Server Port      :  10086</span><br><span class="line">Your Password         :  123456</span><br><span class="line">Your Encryption Method:  aes-256-cfb</span><br><span class="line">Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)</span><br><span class="line">ss://xxxxxxxxxxxxxxxxx</span><br><span class="line">Your QR Code has been saved as a PNG file </span><br><span class="line">path:/root/shadowsocks_python_qr.png</span><br><span class="line"></span><br><span class="line">Welcome to visit: </span><br><span class="line">https://teddysun.com/486.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何查看SS端口及端口参数"><a href="#如何查看SS端口及端口参数" class="headerlink" title="如何查看SS端口及端口参数"></a>如何查看SS端口及端口参数</h2><ol>
+<li>查询SS配置文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/</span><br><span class="line"></span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+<p>终端会显示以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">total 1408</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br><span class="line">-rw-r--r--   1 root root        0 Nov 18 07:04 shadowsocks.json</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 00:23 shadowsocks-libev</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 02:04 shadowsocks-r</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>很多相关教程都让修改shadowsocks.json文件，但是在我的文件夹内，shadowsocks.json文件的文件大小为0Kb。因此无法修改。<br>但是，经研究发现，shadowsocks-libev和shadowsocks-r中均有一个config.json文件。终端输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/shadowsocks-r/</span><br><span class="line">ll</span><br><span class="line">cat config.json</span><br></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.修改文件，使用<code>vi</code>指令，输入如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi config.json</span><br></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">                                          </span><br><span class="line">&quot;config.json&quot; 11L, 227C</span><br></pre></td></tr></table></figure>
+<p>此时界面是可输入界面，修改完成后，按<code>esc</code>键，然后输入<code>:wq</code>按回车键结束修改。</p>
+<h2 id="SS端口"><a href="#SS端口" class="headerlink" title="SS端口"></a>SS端口</h2><ol>
+<li>查看服务器端口监听情况<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure></li>
+<li>查看端口的连接数</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nat | grep -f &quot;port&quot; | wc -l</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>过滤掉监控127.0.0.1的端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lntp   --inet | grep -v 127.0.0.1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/install-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -591,7 +778,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/establish-shadowsocks/">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/02/22/structured-interview-management-for-material/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chet Chou">
@@ -610,7 +797,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/11/19/establish-shadowsocks/" itemprop="url">如何查看SS开启了哪些端口？</a></h1>
+                <a class="post-title-link" href="/2019/02/22/structured-interview-management-for-material/" itemprop="url">材料阅读(一)</a></h1>
         
 
         <div class="post-meta">
@@ -622,8 +809,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T00:00:00+08:00">
-                2019-11-19
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-22T19:47:13+08:00">
+                2019-02-22
               </time>
             
 
@@ -645,19 +832,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Shadowsocks/" itemprop="url" rel="index">
-                    <span itemprop="name">Shadowsocks</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Shadowsocks/Bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">Bandwagon</span>
+                  <a href="/categories/Interview/" itemprop="url" rel="index">
+                    <span itemprop="name">Interview</span>
                   </a>
                 </span>
 
@@ -667,8 +843,6 @@
             </span>
           
 
-          
-            
           
 
           
@@ -695,39 +869,17 @@
       
         
           
-            <h4 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h4><ol>
-<li>自动安装SS，代码如下：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&amp;gt;&amp;amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
-
-<p>2.根据提示逐步设置ss类型，密码，端口，加密类型等，根据需要选择，不懂的话默认回车。特别注意，ios终端有些软件不支持shadowsocksR，谨慎选择。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Which Shadowsocks server you’d select:</span><br><span class="line">1) Shadowsocks-Python</span><br><span class="line">2) ShadowsocksR</span><br><span class="line">3) Shadowsocks-Go</span><br><span class="line">4) Shadowsocks-libev</span><br><span class="line">Please enter a number</span><br><span class="line">(Default Shadowsocks-Python):1</span><br><span class="line">You choose = Shadowsocks-Python</span><br><span class="line"></span><br><span class="line">Please enter password for Shadowsocks-Python</span><br><span class="line">(Default password: teddysun.com):123456</span><br><span class="line"></span><br><span class="line">password = 123456</span><br><span class="line"></span><br><span class="line">Please enter a port for Shadowsocks-Python [1-65535]</span><br><span class="line">(Default port: 11260):10086</span><br><span class="line"></span><br><span class="line">port = 10086</span><br></pre></td></tr></table></figure>
-<p>3.按照提示输入完成，命令执行完后会出来SS通道信息。如下所示：（可以复制保存一下）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">INFO: loading config from /etc/shadowsocks-python/config.json2019-03-28 05:14:24 INFO     loading libcrypto from libcrypto.so.10Starting Shadowsocks successCongratulations, Shadowsocks-Python server install completed!</span><br><span class="line">Your Server IP        :  123.234.222.210</span><br><span class="line">Your Server Port      :  10086</span><br><span class="line">Your Password         :  123456</span><br><span class="line">Your Encryption Method:  aes-256-cfb</span><br><span class="line">Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)</span><br><span class="line">ss://xxxxxxxxxxxxxxxxx</span><br><span class="line">Your QR Code has been saved as a PNG file </span><br><span class="line">path:/root/shadowsocks_python_qr.png</span><br><span class="line"></span><br><span class="line">Welcome to visit: </span><br><span class="line">https://teddysun.com/486.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
-
-<h2 id="如何查看SS端口及端口参数"><a href="#如何查看SS端口及端口参数" class="headerlink" title="如何查看SS端口及端口参数"></a>如何查看SS端口及端口参数</h2><ol>
-<li>查询SS配置文件</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/</span><br><span class="line"></span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
-<p>终端会显示以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">total 1408</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br><span class="line">-rw-r--r--   1 root root        0 Nov 18 07:04 shadowsocks.json</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 00:23 shadowsocks-libev</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 02:04 shadowsocks-r</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-<p>很多相关教程都让修改shadowsocks.json文件，但是在我的文件夹内，shadowsocks.json文件的文件大小为0Kb。因此无法修改。<br>但是，经研究发现，shadowsocks-libev和shadowsocks-r中均有一个config.json文件。终端输入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/shadowsocks-r/</span><br><span class="line">ll</span><br><span class="line">cat config.json</span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.修改文件，使用<code>vi</code>指令，输入如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi config.json</span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">                                          </span><br><span class="line">&quot;config.json&quot; 11L, 227C</span><br></pre></td></tr></table></figure>
-<p>此时界面是可输入界面，修改完成后，按<code>esc</code>键，然后输入<code>:wq</code>按回车键结束修改。</p>
-<h2 id="SS端口"><a href="#SS端口" class="headerlink" title="SS端口"></a>SS端口</h2><ol>
-<li>查看服务器端口监听情况<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure></li>
-<li>查看端口的连接数</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nat | grep -f &quot;port&quot; | wc -l</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>过滤掉监控127.0.0.1的端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lntp   --inet | grep -v 127.0.0.1</span><br></pre></td></tr></table></figure>
-
+            <p>材料一:</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;乡村旅游是旅游业的重要组成部分，是实施乡村振兴战略的重要力量，在加快推进农业农村现代化、城乡融合发展、贫困地区脱贫攻坚等方面发挥着重要作用。据统计，2018年上半年休闲农业和乡村旅游共接待16亿人次，实现营业收入4200亿元，同比增长15%.<br>&nbsp;&nbsp;&nbsp;&nbsp;寒冬时节， 一些乡村旅游景区进入“冬眠”. 例如，西南某县盛产茶叶，每到采茶时节，漫山茶香弥漫，风光秀丽，慕名前来的游客络绎不绝，赏茶捕茶品茶。但到了冬天，景区游人稀少，这可急坏了农家乐的老板们，景区里的饭店、民宿都接不到客人，一些甚至关门歇业。<br>&nbsp;&nbsp;&nbsp;&nbsp;河南省的郭亮村，因村中有连成排的悬崖峭壁，陡峭的山峰直插云天，被誉为太行明珠。该村旅游业刚见起色的时候，游客如织，不少剧组前来拍摄影视剧，给郭亮村带来了很大的经济效益，据说最多的时候，人均年收入高达七八十万元!但是随着时间的推进，越来越多的问题也暴露出来，如郭亮村的门票128元，前往必须坐专门的大巴，与老村长合影要10元，上厕所也收费，对于这些乱象，游客也是十分不满现如今，名噪一时的郭亮村，却变得荒凉无比。<br>&nbsp;&nbsp;&nbsp;&nbsp;黑龙江雪乡，曾被曝漫天要价，且价格不公开不透明，很多旅游者表示不满。2018年，新的旅游旺季到来，“雪乡”对这一问题进行了修正，要求每个饭店和宾馆都把价格明明白白地写出来。然而，“雪乡”改正后的效果仍然惹来很多非议。有游客指出，明码标出的住宿价格仍然非常高，和之前漫天要价时相比根本没便宜多少，这里的住宿环境非常不好，价格根本不值<br>&nbsp;&nbsp;&nbsp;&nbsp;乡村游旺季时路上堵满车，淡季里景区不见人，市场主体实力相对较弱，经管能力不强，创意不够，这样的现象并不少见地方抓旅游，往往注重硬环境的建设，却忽视交通、食宿、网络通信、污水处理、卫生服务等软环境有面的建设和管理，导致游客体验差，留不住难再来。比如花海，除了规模不一，其它大抵相同:比如农家乐，几乎家都是棋牌、钓鱼加餐饮。<br>&nbsp;&nbsp;&nbsp;&nbsp;乡村生活的闲适性，不仅要能欣赏美景、安享美食，也要能安放乡愁、洗漆心境。如何让乡村游科学发展成为一个发展课题。</p>
+<p>问题：</p>
+<ol>
+<li><p>请结合思路，谈谈你对乡村旅游的看法？</p>
+</li>
+<li><p>县政府打算针对郭亮村的乱象进行一次专项整治，如果你是此次的负责人，你会如何开展？</p>
+</li>
+<li><p>某游客在微博上发帖，说自己在雪乡某饭店被宰客，引起了群众的广泛转发，你是旅游局的一名工作人员，领导让你去处理此事，你如何解决？</p>
+</li>
+<li><p>作为当地旅游局的工作人员，面对西南某县的问题，你如何帮助其尽快走出困境？</p>
 </li>
 </ol>
 
@@ -778,7 +930,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/24/inaccessible-disqus/">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/02/21/structured-interview-management-for-training/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chet Chou">
@@ -797,7 +949,843 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/24/inaccessible-disqus/" itemprop="url">Disqus评论系统无法加载</a></h1>
+                <a class="post-title-link" href="/2019/02/21/structured-interview-management-for-training/" itemprop="url">计划组织能力之培训</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-21T23:06:13+08:00">
+                2019-02-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Interview/" itemprop="url" rel="index">
+                    <span itemprop="name">Interview</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>【例题1】<br><em>为了更好地帮助毕业生实现就业，某高校就业处准备针对毕业生开办就业技能与创业培训班培训。假如这次工作由你负责，你会如何开展？</em></p>
+</blockquote>
+<p>答题思路：</p>
+<ol>
+<li>培训目的：帮助毕业生实现就业，提高学校就业率</li>
+<li>事前准备：问卷调研需求/宣传确定报名人数/联系场地/确定时间</li>
+<li>培训对象：毕业生</li>
+<li>培训内容：<ol>
+<li>就业创业相关讲座</li>
+<li>简历制作技巧</li>
+<li>面试技巧</li>
+<li>面试模拟</li>
+<li>创业成功校友经验交流</li>
+</ol>
+</li>
+<li>培训形式：讲座/情景模拟/座谈会/PPT培训</li>
+<li>培训讲师：大型企业人事主管（HR）/创业成功的校友/就业办老师</li>
+<li>效果跟进：跟踪调查回访/就业创业情况</li>
+</ol>
+<p>完整作答：<br><br>此次针对毕业生开办的就业与创业培训，目的是帮助毕业生实现就业，有利于提高学校的就业率。如果此次培训由我负责，我将按照如下步骤进行开展：<br><br>&nbsp;&nbsp;首先，我将提前准备好调查问卷，主要了解毕业生们的就业与创业所存在的问题。对其进行分析总结。通过毕业生们的需求，确定培训内容，培训时间。然后通过网上报名和现场报名的方式，确定参加培训的人数。根据人数确定培训地点，联系好和学校有合作的大型企业的人事主管及创业成功的校友及就业办老师，配合此次的培训的有效开展。<br><br>&nbsp;&nbsp;其次，培训分两天完成，第一天上午，由校就业办的老师针对就业创业进行讲座，对同学们的问题进行答疑解惑；第一天下午，召集创业成功的校友和希望创业的毕业生进行座谈，对创业问题进行深入的了解。第二天，将按照简历制作技巧、面试技巧、面试模拟的内容逐项进行，由大型企业的人事主管负责，对向参加就业的同学进行指导。<br><br>&nbsp;&nbsp;最后，待培训结束后，对参加活动的毕业生进行跟踪回访调查，收集意见或建议，有助于提升下次举办此类的活动的效果。后续还应对毕业生的创业就业情况进行统计分析，最终汇总成培训报告，供校相关领导审阅。</p>
+<hr>
+<blockquote>
+<p>【例题2】<br><em>乡村医生的水平关乎着全体村民的健康，为提高乡村医生的水平，县卫计委准备组织一场培训活动，如果你是该活动的负责人，你会怎么组织？</em></p>
+</blockquote>
+<p><em>答题思路：</em></p>
+<ol>
+<li>培训目的：提升乡村医生水平，更好的保障村民身体健康。</li>
+<li>事前准备：调研乡村医生的水平，乡村医生需要哪方面技能的培训；调研农村常见病的情况及种类；</li>
+<li>培训内容：对常见病处理方式；新型医疗器械的使用；症状诊断；政策宣传；培训医德；</li>
+<li>培训形式：专家讲座；视频；模拟操作；</li>
+<li>培训讲师：卫计委工作人员；市医院主任医师；</li>
+<li>效果评估：笔试考核、实操考核</li>
+</ol>
+<p><em>完整作答：</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;开展对乡村医生的培训活动，有助于提高乡村医生的技能，对全体村民的健康更加有保障。作为卫计委的工作人员，我将按照如下步骤进行组织：</p>
+<ol>
+<li>使用调查问卷的方式，对乡村医生的医疗水平进行调研，并了解一下乡村医生需要哪方面医疗技能培训。除此之外，还对农村居民的常见病情况进行了解。根据了解的情况，准备培训材料，确定培训时间及培训地点。提前邀请对应的儿科、内科、外科主任医生，为培训做准备。</li>
+<li>培训时间分两天进行。第一天，安排主任医生依次培训，针对相应科目下的常见病进行指导，如何对症状进行诊断，及以及对相关新型的医疗器械进行指导使用，模拟操作。第二天，由我对乡村医生进行医生职业道德的培训，以提升乡村医生的综合素养；除此之外，我还将对乡村医生进行乡村医生相关政策培训，助其了解政府的有利政策。</li>
+<li>最后，通过对参加培训的乡村医生进行笔试考核及实操考核，对考核通过的乡村医生颁发相关证书；对于未考核通过的乡村医生，有针对性的进行二次培训，后进行考核，保证乡村医生掌握培训内容。</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;通过上述的组织安排，乡村医生的综合素质会有一定的提升。后续，还可以定期举办相关培训，进一步提升其能力。</p>
+<hr>
+<blockquote>
+<p>【例题3-2016年市考面试题】<br><em>市教委组织大学生去贫困地区支教，在多所高校选取了100名大学生组成支教团，现要在出发前开展为期三天的培训。你是教委工作人员，如果此次培训由你负责，你会如何组织？</em></p>
+</blockquote>
+<p><em>答题思路</em></p>
+<ol>
+<li>培训目的：更快速的投入支教活动；保证支教效果；</li>
+<li>事前准备：调研了解大学生的疑惑；调研了解贫困地区的学生需求及课程设置情况；确定培训时间、地点</li>
+<li>培训内容：课程内容介绍；民风民俗介绍；讲课模拟</li>
+<li>培训形式：座谈会；讲座；情景模拟；</li>
+<li>培训讲师：有经验的支教同学；贫困地区的教师；</li>
+<li>效果评估：测验；试讲</li>
+</ol>
+<p><em>完整答题</em></p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;组织大学生去贫困地区支教，不仅可以帮助贫困地区学生汲取新鲜的知识，还有利于锻炼大学生的意志及服务意识。作为一名教委工作人员，将会按照下列步骤安排培训：</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;首先，分别对贫困地区的学生及大学生进行调研，了解贫困地区的学生需求及相关课程设置情况，便于安排教学内容。同时，了解大学生对去贫困地区支教有什么想知道的情况。参考调研情况确定培训内容，根据人数确定培训时间地点，并联系有经验的支教同学、教授、贫困地区的教师告知相关信息。</p>
+<p>其次，培训时间安排如下：</p>
+<ol>
+<li>第一天，安排课程相关讲座，由课程方面的教授进行授课，让支教大学生分科目进行课程学习。学习完成后，组织一次测验，测试同学们的学习成果，判断其知识储备是否满足支教要求。</li>
+<li>第二天，安排情景模拟，课堂试讲。按照大学生的科目分工，对其进行一一试讲，并对其进行点评，便于优化其讲课质量，提升学生的课程接受度。</li>
+<li>第三天，安排贫困地区的教师，对大学生进行民俗民俗的介绍，对大学生生活上存在的疑虑也进行详细介绍。安排有支教经验的同学和大家分组进行座谈会，为大学生们解疑答惑。</li>
+</ol>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;通过上述的组织安排，能够让大学生更加快速的融入贫困地区，更快速的进入支教状态，使得此次支教活动顺利完成。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/11/08/configure-java-environment/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/11/08/configure-java-environment/" itemprop="url">win10配置Java环境</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-08T14:57:55+08:00">
+                2018-11-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Win10-配置java环境"><a href="#Win10-配置java环境" class="headerlink" title="Win10 配置java环境"></a>Win10 配置java环境</h1><p>{:toc}</p>
+<h2 id="配置Java环境前提"><a href="#配置Java环境前提" class="headerlink" title="配置Java环境前提"></a>配置Java环境前提</h2><p>配置java环境之前已经安装Java的JDK。如果未安装，请从Oracle官网下载对应32位或64位的电脑版本。<a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">下载地址</a></p>
+<p>笔者安装的是：<strong>jdk-8u191-windows-x64</strong> 版本。</p>
+<h2 id="配置Java环境变量"><a href="#配置Java环境变量" class="headerlink" title="配置Java环境变量"></a>配置Java环境变量</h2><ol>
+<li><h3 id="进入配置界面"><a href="#进入配置界面" class="headerlink" title="进入配置界面"></a>进入配置界面</h3><p>右键点击“此电脑”，点击“属性”，打开”高级系统设置“，选择“环境变量（N）…”，如图所示。</p>
+<p><img src="/images/1541655901844.png" alt="1541655901844"></p>
+</li>
+<li><h3 id="开始配置"><a href="#开始配置" class="headerlink" title="开始配置"></a>开始配置</h3><p>新建系统变量，</p>
+<p>变量名为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JAVA_HOME</span><br></pre></td></tr></table></figure>
+
+<p>变量值为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Program Files\Java\jdk1.8.0_191</span><br></pre></td></tr></table></figure>
+
+<p><img src="//images/1541659170776.png" alt="1541659170776"></p>
+<p>编辑系统变量，在现有变量之前，加上：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/1541659435688.png" alt="1541659435688"></p>
+<p>新建系统变量，变量名为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CLASSPATH</span><br></pre></td></tr></table></figure>
+
+<p>变量值为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.;%JAVA_HOME%\lib;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/1541659215120.png" alt="1541659215120"></p>
+<p>配置完成后，点击确定即可。</p>
+</li>
+</ol>
+<h2 id="测试java环境是否配置成功"><a href="#测试java环境是否配置成功" class="headerlink" title="测试java环境是否配置成功"></a>测试java环境是否配置成功</h2><p>使用快捷键”Win+R”,输入“cmd”。分别依次输入以下代码并回车，若显示如下示例所示，即可认为配置成功。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java</span><br></pre></td></tr></table></figure>
+
+<p><img src="/images/1541654993660.png" alt="1541654993660"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac</span><br></pre></td></tr></table></figure>
+
+<p><img src="/assets/img/1541654855230.png" alt="1541654855230"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+
+<p><img src="/assets/img/1541655088797.png" alt="1541655088797"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/28/common-software/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/28/common-software/" itemprop="url">常用办公软件下载方式汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-28T11:00:13+08:00">
+                2018-10-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Software/" itemprop="url" rel="index">
+                    <span itemprop="name">Software</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="电脑重装系统后必备软件链接"><a href="#电脑重装系统后必备软件链接" class="headerlink" title="电脑重装系统后必备软件链接"></a>电脑重装系统后必备软件链接</h1><blockquote>
+<p>此网页为特定用户设计，为避免下载到垃圾软件，直接写上链接诱导下载，如有侵权，请直接邮件联系，立马删除相关内容。</p>
+</blockquote>
+<ol>
+<li>钉钉由阿里巴巴开发完成，可以根据所需安装的平台，下载对应的版本。<br><a href="https://tms.dingtalk.com/markets/dingtalk/download?spm=a3140.8736650.2231602.10.7f153a1aKAxSlw/?_blank" target="_blank" rel="noopener">点击下载</a></li>
+<li>目前腾讯特别针对办公人员推出了一款TIM软件，是QQ的替代版本，让QQ专注于聊天。<br><br> <a href="https://im.qq.com/?_blank" target="_blank" rel="noopener">点击下载</a></li>
+<li>微信桌面客户端就没啥要说的了.<br><a href="https://pc.weixin.qq.com/?_blank" target="_blank" rel="noopener">点击下载</a></li>
+<li>WPS版本最新版已经更新到2019版了，但是实际体验不好，广告甚多。因此推荐下载WPS Office 2016版。<br><a href="http://www.wps.cn/product/wps2016/?from=www.wps.cn/?_blank" target="_blank" rel="noopener">点击下载</a></li>
+<li>Office系列产品推荐上<a href="https://msdn.itellyou.cn/?_blank" target="_blank" rel="noopener">MSDN i tell you</a> 上下载，所有链接均为正版，版本较全。选择对应版本后，复制选择的磁力下载链接，打开<a href="http://x.xunlei.com/?_blank" target="_blank" rel="noopener">迅雷下载</a>工具即可下载。</li>
+<li>输入法本人推荐手心输入法，相对于搜狗输入法来说，手心输入法没有广告，功能和搜狗相差无几，有助于提高工作效率。<br><a href="http://www.xinshuru.com/?_blank" target="_blank" rel="noopener">点此下载</a></li>
+</ol>
+<hr>
+<p>未完待续。。。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/26/markdown-syntax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/26/markdown-syntax/" itemprop="url">Markdown语法汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-26T01:00:13+08:00">
+                2018-10-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Markdown/" itemprop="url" rel="index">
+                    <span itemprop="name">Markdown</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Jekyll暂时没有正常解析Mardown文本，MWeb上预览效果正常，但是上传到Github上解析出来一塌糊涂，大家欢迎提意见。</strong></p>
+<p>Markdown是一种可以使用普通文本编辑器编辑的标记语言，通过对内容进行标记，使得普通文本具有一定的格式。<br>因语法较多，不定期更新总结。</p>
+<ul>
+<li><p>字体大小及颜色<br><br>  <code>&lt;font size=7&gt;**关于**&lt;/font&gt;</code><br><br>  <font size=5>size为文字大小，1-7逐渐增大，默认值为3</font><br></p>
+<p>  <code>&lt;font face=&quot;微软雅黑&quot;&gt;关于&lt;/font&gt;</code><br><br>  <font face="微软雅黑">face为文字字体，根据喜好自选。</font><br></p>
+<p>  <code>&lt;font color=red&gt;关于&lt;/font&gt;</code><br><br>  <font color=red>color为字体颜色，可以填写十六进制颜色值或颜色名。</font></p>
+</li>
+<li><p>位置<br><br>  <code>&lt;center&gt;关于&lt;/center&gt;</code> or <code>&lt;div align=center&gt;关于&lt;/div&gt;</code><br><br>如： <center>关于</center><br><br> 解析截图如下：<br><img src="/images/right-resolution.png" alt="right-resolution"></p>
+</li>
+</ul>
+<hr>
+<p>未完待续…</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/25/sublime-text-shortcuts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/25/sublime-text-shortcuts/" itemprop="url">Sublime Text3 快捷键汇总</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-25T13:36:13+08:00">
+                2018-10-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Sublime/" itemprop="url" rel="index">
+                    <span itemprop="name">Sublime</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Mac在键入内容时，可以使用字符检视器插入表情符号、重音符号和其他符号，详细请参考：<br><a href="https://support.apple.com/zh-cn/HT201586" target="_blank" rel="noopener">参考文档</a></p>
+<ol>
+<li>Column Selection<ul>
+<li><code>Ctrl</code>+<code>Shift</code>+<code>↑</code></li>
+<li><code>Ctrl</code>+<code>Shift</code>+<code>↓</code></li>
+</ul>
+</li>
+</ol>
+<hr>
+<p>未完待续</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/24/disqus-unconnection/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/24/disqus-unconnection/" itemprop="url">Disqus评论系统无法加载的忧伤</a></h1>
         
 
         <div class="post-meta">
@@ -832,19 +1820,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Jekyll/" itemprop="url" rel="index">
-                    <span itemprop="name">Jekyll</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Jekyll/Disqus/" itemprop="url" rel="index">
-                    <span itemprop="name">Disqus</span>
+                  <a href="/categories/Jekyll-Disqus/" itemprop="url" rel="index">
+                    <span itemprop="name">-[Jekyll,Disqus]</span>
                   </a>
                 </span>
 
@@ -854,8 +1831,6 @@
             </span>
           
 
-          
-            
           
 
           
@@ -948,238 +1923,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2018/10/16/estabilsh-jekyll/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chet Chou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHOU's blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/16/estabilsh-jekyll/" itemprop="url">教你如何安装Jekyll</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T23:36:13+08:00">
-                2018-10-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Jekyll/" itemprop="url" rel="index">
-                    <span itemprop="name">Jekyll</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Jekyll/MacOS/" itemprop="url" rel="index">
-                    <span itemprop="name">MacOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="Requirements-before-setting-up-your-Github-Pages-site-locally-with-Jekyll"><a href="#Requirements-before-setting-up-your-Github-Pages-site-locally-with-Jekyll" class="headerlink" title="Requirements before setting up your Github Pages site locally with Jekyll"></a>Requirements before setting up your Github Pages site locally with Jekyll</h1><ul>
-<li><p>Step 1: 打开Mac的终端软件.</p>
-</li>
-<li><p>Step 2: 验证你的Mac是否已经安装了Ruby 2.1.0或者更高的版本：<br><br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$ ruby --version</code></p>
-<ul>
-<li>Step 2.1: 如果已经安装，请直接进入第三步<br><br><code>ruby 2.X.X</code></li>
-<li>Step 2.2: 如果你没有安装，请安装Ruby 2.1.0或者更高版本:<br>请参考我的上一篇文档<a href="http://blog.chetchou.cn/jekyll/update/2018/10/16/set-up-ruby.html" target="_blank" rel="noopener">《MacOS安装Ruby运行环境》</a>。</li>
-</ul>
-</li>
-<li><p>Step 3:安装bundler<br><br><code>$ gem install bundler</code></p>
-</li>
-<li><p>Step 4: 安装Git，这里我选择的是安装Git用指令操作，而不是Git桌面端。</p>
-<ol>
-<li>下载并安装最新版的Git.<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">click here</a></li>
-<li>配置Git的用户名.<a href="https://help.github.com/articles/setting-your-username-in-git/" target="_blank" rel="noopener">click here</a></li>
-<li>配置Git的邮箱.<a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/" target="_blank" rel="noopener">click here</a><br><br><strong>PS：</strong>然而，我在安装的时候似乎没有配置用户名和邮箱<br><br>然后，你可以从Github主页上克隆你的仓库文件到本地。<br></li>
-</ol>
-</li>
-<li><p>Step 5: 通过Bundler安装Jekyll<br>  To track your site’s dependencies, Ruby will use the contents of your Gemfile to build your Jekyll site.</p>
-<ol>
-<li><p>验证你的本地Jekyll网页仓库中是否有Gemfile文件:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">Gemfile</span><br></pre></td></tr></table></figure>
-<p> 如果仓库中有Gemfile文件,跳到step 4. 如果没有，则跳到step 2.</p>
-</li>
-<li><p>如果仓库中没有Gemfile文件,打开文本编辑器,如Atom或sublime Text,新建一个文件加入如下命令行:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
-<li><p>把新建的文件命名为Gemfile并保存到你的本地Jekyll网页仓库的根目录中，跳到 step 5 准备安装Jekyll.</p>
-</li>
-<li><p>如果你已经有一个Gemfile，打开你的文本编辑器，如Atom或者Submit Text3，把如下几行代码加入你的Gemfile文件:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
-<li><p>从Github Pages gem安装Jekyll及其它依赖文件:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br><span class="line">Fetching gem metadata from https://rubygems.org/............</span><br><span class="line">Fetching version metadata from https://rubygems.org/...</span><br><span class="line">Fetching dependency metadata from https://rubygems.org/..</span><br><span class="line">Resolving dependencies...</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ul>
-<p>想获得更详细的教程，请参考 <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll" target="_blank" rel="noopener">此文档</a></p>
-<hr>
-<ul>
-<li><p>Step 1: Open terminal.</p>
-</li>
-<li><p>Step 2: Check whether you have Ruby 2.1.0 or higher installed:<br><br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>$ ruby --version</code></p>
-<ul>
-<li>Step 2.1: if you already have, Skip to Step 4:<br><br><code>ruby 2.X.X</code></li>
-<li>Step 2.2: if you don’t have:<br>Please refer to <a href="https://www.ruby-lang.org/en/downloads/" target="_blank" rel="noopener">this site</a>   </li>
-</ul>
-</li>
-<li><p>Step 3:install bundler<br><br><code>$ gem install bundler</code></p>
-</li>
-<li><p>Step 4: set up Git</p>
-<ol>
-<li>Download and install the latest version of Git.<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">click here</a></li>
-<li>Set your username in Git.<a href="https://help.github.com/articles/setting-your-username-in-git/" target="_blank" rel="noopener">click here</a></li>
-<li>Set your commit email address in Git.<a href="https://help.github.com/articles/setting-your-commit-email-address-in-git/" target="_blank" rel="noopener">click here</a><br><br><strong>However, I don’t think the last two steps in setting up git is necessary</strong><br><br>then, you can clone your repository from your Github.</li>
-</ol>
-</li>
-<li><p>Step 5: Install Jekyll using Bundler<br>  To track your site’s dependencies, Ruby will use the contents of your Gemfile to build your Jekyll site.</p>
-<ol>
-<li><p>Check to see if you have a Gemfile in your local Jekyll site repository:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br><span class="line">Gemfile</span><br></pre></td></tr></table></figure>
-<p> If you have a Gemfile, skip to step 4. If you don’t have a Gemfile, skip to step 2.</p>
-</li>
-<li><p>If you don’t have a Gemfile, open your favorite text editor, such as Atom, and add these lines to a new file:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
-<li><p>Name the file Gemfile and save it to the root directory of your local Jekyll site repository. Skip to step 5 to install Jekyll.</p>
-</li>
-<li><p>If you already have a Gemfile, open your favorite text editor, such as Atom or Submit Text3, and add these lines to your Gemfile:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">source &apos;https://rubygems.org&apos;</span><br><span class="line">gem &apos;github-pages&apos;, group: :jekyll_plugins</span><br></pre></td></tr></table></figure></li>
-<li><p>Install Jekyll and other dependencies from the GitHub Pages gem:<br></p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">bundle install</span><br><span class="line">Fetching gem metadata from https://rubygems.org/............</span><br><span class="line">Fetching version metadata from https://rubygems.org/...</span><br><span class="line">Fetching dependency metadata from https://rubygems.org/..</span><br><span class="line">Resolving dependencies...</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-</li>
-</ul>
-<p>You can want to read more, please refer to this <a href="https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll" target="_blank" rel="noopener">specific instruction</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class=&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1227,7 +1977,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1238,7 +1988,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -1249,7 +1999,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
