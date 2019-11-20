@@ -402,193 +402,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/establish-shadowsocks/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chet Chou">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="CHOU's blogs">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/11/19/establish-shadowsocks/" itemprop="url">如何查看SS开启了哪些端口？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T00:00:00+08:00">
-                2019-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Shadowsocks/" itemprop="url" rel="index">
-                    <span itemprop="name">Shadowsocks</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Shadowsocks/Bandwagon/" itemprop="url" rel="index">
-                    <span itemprop="name">Bandwagon</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h4 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h4><ol>
-<li>自动安装SS，代码如下：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&amp;gt;&amp;amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
-
-<p>2.根据提示逐步设置ss类型，密码，端口，加密类型等，根据需要选择，不懂的话默认回车。特别注意，ios终端有些软件不支持shadowsocksR，谨慎选择。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Which Shadowsocks server you’d select:</span><br><span class="line">1) Shadowsocks-Python</span><br><span class="line">2) ShadowsocksR</span><br><span class="line">3) Shadowsocks-Go</span><br><span class="line">4) Shadowsocks-libev</span><br><span class="line">Please enter a number</span><br><span class="line">(Default Shadowsocks-Python):1</span><br><span class="line">You choose = Shadowsocks-Python</span><br><span class="line"></span><br><span class="line">Please enter password for Shadowsocks-Python</span><br><span class="line">(Default password: teddysun.com):123456</span><br><span class="line"></span><br><span class="line">password = 123456</span><br><span class="line"></span><br><span class="line">Please enter a port for Shadowsocks-Python [1-65535]</span><br><span class="line">(Default port: 11260):10086</span><br><span class="line"></span><br><span class="line">port = 10086</span><br></pre></td></tr></table></figure>
-<p>3.按照提示输入完成，命令执行完后会出来SS通道信息。如下所示：（可以复制保存一下）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">INFO: loading config from /etc/shadowsocks-python/config.json2019-03-28 05:14:24 INFO     loading libcrypto from libcrypto.so.10Starting Shadowsocks successCongratulations, Shadowsocks-Python server install completed!</span><br><span class="line">Your Server IP        :  123.234.222.210</span><br><span class="line">Your Server Port      :  10086</span><br><span class="line">Your Password         :  123456</span><br><span class="line">Your Encryption Method:  aes-256-cfb</span><br><span class="line">Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)</span><br><span class="line">ss://xxxxxxxxxxxxxxxxx</span><br><span class="line">Your QR Code has been saved as a PNG file </span><br><span class="line">path:/root/shadowsocks_python_qr.png</span><br><span class="line"></span><br><span class="line">Welcome to visit: </span><br><span class="line">https://teddysun.com/486.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
-
-<h2 id="如何查看SS端口及端口参数"><a href="#如何查看SS端口及端口参数" class="headerlink" title="如何查看SS端口及端口参数"></a>如何查看SS端口及端口参数</h2><ol>
-<li>查询SS配置文件</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/</span><br><span class="line"></span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
-<p>终端会显示以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">total 1408</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br><span class="line">-rw-r--r--   1 root root        0 Nov 18 07:04 shadowsocks.json</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 00:23 shadowsocks-libev</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 02:04 shadowsocks-r</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-<p>很多相关教程都让修改shadowsocks.json文件，但是在我的文件夹内，shadowsocks.json文件的文件大小为0Kb。因此无法修改。<br>但是，经研究发现，shadowsocks-libev和shadowsocks-r中均有一个config.json文件。终端输入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/shadowsocks-r/</span><br><span class="line">ll</span><br><span class="line">cat config.json</span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.修改文件，使用<code>vi</code>指令，输入如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi config.json</span><br></pre></td></tr></table></figure>
-<p>输出如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">                                          </span><br><span class="line">&quot;config.json&quot; 11L, 227C</span><br></pre></td></tr></table></figure>
-<p>此时界面是可输入界面，修改完成后，按<code>esc</code>键，然后输入<code>:wq</code>按回车键结束修改。</p>
-<h2 id="SS端口"><a href="#SS端口" class="headerlink" title="SS端口"></a>SS端口</h2><ol>
-<li>查看服务器端口监听情况<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure></li>
-<li>查看端口的连接数</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nat | grep -f &quot;port&quot; | wc -l</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>过滤掉监控127.0.0.1的端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lntp   --inet | grep -v 127.0.0.1</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/install-hexo/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -730,6 +543,193 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <p>hexo安装完成，输出如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ hexo@4.0.0</span><br><span class="line">added 356 packages from 463 contributors and audited 2458 packages in 55.825s</span><br><span class="line">found 0 vulnerabilities</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://test.chetchou.cn/2019/11/19/establish-shadowsocks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chet Chou">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CHOU's blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/11/19/establish-shadowsocks/" itemprop="url">如何查看SS开启了哪些端口？</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-19T00:00:00+08:00">
+                2019-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shadowsocks/" itemprop="url" rel="index">
+                    <span itemprop="name">Shadowsocks</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Shadowsocks/Bandwagon/" itemprop="url" rel="index">
+                    <span itemprop="name">Bandwagon</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="搭建SS"><a href="#搭建SS" class="headerlink" title="搭建SS"></a>搭建SS</h4><ol>
+<li>自动安装SS，代码如下：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate -O shadowsocks.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks.sh</span><br><span class="line">chmod +x shadowsocks.sh</span><br><span class="line">./shadowsocks.sh 2&amp;gt;&amp;amp;1 | tee shadowsocks.log</span><br></pre></td></tr></table></figure>
+
+<p>2.根据提示逐步设置ss类型，密码，端口，加密类型等，根据需要选择，不懂的话默认回车。特别注意，ios终端有些软件不支持shadowsocksR，谨慎选择。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">Which Shadowsocks server you’d select:</span><br><span class="line">1) Shadowsocks-Python</span><br><span class="line">2) ShadowsocksR</span><br><span class="line">3) Shadowsocks-Go</span><br><span class="line">4) Shadowsocks-libev</span><br><span class="line">Please enter a number</span><br><span class="line">(Default Shadowsocks-Python):1</span><br><span class="line">You choose = Shadowsocks-Python</span><br><span class="line"></span><br><span class="line">Please enter password for Shadowsocks-Python</span><br><span class="line">(Default password: teddysun.com):123456</span><br><span class="line"></span><br><span class="line">password = 123456</span><br><span class="line"></span><br><span class="line">Please enter a port for Shadowsocks-Python [1-65535]</span><br><span class="line">(Default port: 11260):10086</span><br><span class="line"></span><br><span class="line">port = 10086</span><br></pre></td></tr></table></figure>
+<p>3.按照提示输入完成，命令执行完后会出来SS通道信息。如下所示：（可以复制保存一下）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">INFO: loading config from /etc/shadowsocks-python/config.json2019-03-28 05:14:24 INFO     loading libcrypto from libcrypto.so.10Starting Shadowsocks successCongratulations, Shadowsocks-Python server install completed!</span><br><span class="line">Your Server IP        :  123.234.222.210</span><br><span class="line">Your Server Port      :  10086</span><br><span class="line">Your Password         :  123456</span><br><span class="line">Your Encryption Method:  aes-256-cfb</span><br><span class="line">Your QR Code: (For Shadowsocks Windows, OSX, Android and iOS clients)</span><br><span class="line">ss://xxxxxxxxxxxxxxxxx</span><br><span class="line">Your QR Code has been saved as a PNG file </span><br><span class="line">path:/root/shadowsocks_python_qr.png</span><br><span class="line"></span><br><span class="line">Welcome to visit: </span><br><span class="line">https://teddysun.com/486.html</span><br><span class="line">Enjoy it!</span><br></pre></td></tr></table></figure>
+
+<h2 id="如何查看SS端口及端口参数"><a href="#如何查看SS端口及端口参数" class="headerlink" title="如何查看SS端口及端口参数"></a>如何查看SS端口及端口参数</h2><ol>
+<li>查询SS配置文件</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/</span><br><span class="line"></span><br><span class="line">ll</span><br></pre></td></tr></table></figure>
+<p>终端会显示以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">total 1408</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br><span class="line">-rw-r--r--   1 root root        0 Nov 18 07:04 shadowsocks.json</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 00:23 shadowsocks-libev</span><br><span class="line">drwxr-xr-x   2 root root     4096 Nov 15 02:04 shadowsocks-r</span><br><span class="line">***</span><br><span class="line">（此处省略部分显示结果）</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>很多相关教程都让修改shadowsocks.json文件，但是在我的文件夹内，shadowsocks.json文件的文件大小为0Kb。因此无法修改。<br>但是，经研究发现，shadowsocks-libev和shadowsocks-r中均有一个config.json文件。终端输入以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /etc/shadowsocks-r/</span><br><span class="line">ll</span><br><span class="line">cat config.json</span><br></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.修改文件，使用<code>vi</code>指令，输入如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi config.json</span><br></pre></td></tr></table></figure>
+<p>输出如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;server&quot;:&quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;server_port&quot;:10086,</span><br><span class="line">    &quot;password&quot;:&quot;123456&quot;,</span><br><span class="line">    &quot;timeout&quot;:300,</span><br><span class="line">    &quot;user&quot;:&quot;nobody&quot;,</span><br><span class="line">    &quot;method&quot;:&quot;aes-256-cfb&quot;,</span><br><span class="line">    &quot;fast_open&quot;:false,</span><br><span class="line">    &quot;nameserver&quot;:&quot;8.8.8.8&quot;,</span><br><span class="line">    &quot;mode&quot;:&quot;tcp_and_udp&quot;</span><br><span class="line">&#125;</span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">~                                                                                                                                                                 </span><br><span class="line">                                          </span><br><span class="line">&quot;config.json&quot; 11L, 227C</span><br></pre></td></tr></table></figure>
+<p>此时界面是可输入界面，修改完成后，按<code>esc</code>键，然后输入<code>:wq</code>按回车键结束修改。</p>
+<h2 id="SS端口"><a href="#SS端口" class="headerlink" title="SS端口"></a>SS端口</h2><ol>
+<li>查看服务器端口监听情况<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -an</span><br></pre></td></tr></table></figure></li>
+<li>查看端口的连接数</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nat | grep -f &quot;port&quot; | wc -l</span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li>过滤掉监控127.0.0.1的端口<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -lntp   --inet | grep -v 127.0.0.1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
 
           
         
